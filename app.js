@@ -5,7 +5,8 @@ const connectDb = require('./config/db.js');
 const morgan = require('morgan');
 const app = express();
 const PORT = process.env.PORT || 3000;
-const exphbs = require('express-handlebars');
+const exphbs = require('express-handlebars');  
+const path = require('path'); 
 app.listen(
     PORT,
     console.log(
@@ -25,4 +26,8 @@ app.engine('.hbs', exphbs({ defaultLayout: 'main', extname: '.hbs' }));
 app.set('view engine', '.hbs');
 
 // routes 
-app.use('/', require('./routes/index'));
+app.use('/', require('./routes/index')); 
+
+
+// static folder serve 
+app.use(express.static(path.join(__dirname, 'public')))
