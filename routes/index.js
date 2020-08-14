@@ -6,7 +6,7 @@ const router = express.Router();
 // route  GET / 
 
 router.get('/', (req,res) => {
-  res.send('Login')
+  res.render('login')
 })
 
 
@@ -16,7 +16,7 @@ router.get('/', (req,res) => {
 
 
 router.get('/dashboard', (req,res) => {
-  res.send('dashboard')
+  res.render('dashboard')
 })
 
 
