@@ -5,7 +5,7 @@
 
 ## local setup 🎲
   * npm i 
-  * create a db for this project (use db <db name>) 
+  * create a db for this project (use db new_database_here) 
   * add your mongo connection string to config/config.env 
   * brew services start mongodb-community 
   * npm run dev 
